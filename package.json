@@ -1,0 +1,41 @@
+{
+  "name": "mcp-servers-custom",
+  "version": "1.0.0",
+  "description": "A few MCP Server for custom purposes",
+  "keywords": [
+    "mcp",
+    "ai",
+    "llm",
+    "cursor",
+    "copilot"
+  ],
+  "homepage": "https://github.com/sebaeze/mcp-servers-custom#readme",
+  "bugs": {
+    "url": "https://github.com/sebaeze/mcp-servers-custom/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebaeze/mcp-servers-custom.git"
+  },
+  "license": "ISC",
+  "author": "sebaeze@gmail.com",
+  "main": "servers/index.ts",
+  "type": "module",
+  "bin": {
+    "jira-mcp-server": "./servers/build/index.js",
+    "gitlab-mcp-server": "./servers/build/gitlab.js"
+  },
+  "scripts": {
+    "build": "npm run build --prefix servers",
+    "dev": "npm run dev --prefix servers",
+    "watch": "npm run watch --prefix servers",
+    "scan:secrets": "node scripts/scan_secrets.js",
+    "prepare": "husky"
+  },
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
