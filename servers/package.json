@@ -5,7 +5,8 @@
   "type": "module",
   "bin": {
     "jira-mcp-server": "./build/index.js",
-    "gitlab-mcp-server": "./build/gitlab.js"
+    "gitlab-mcp-server": "./build/gitlab.js",
+    "sqlserver-json-mcp-server": "./build/sqlserver-json.js"
   },
   "scripts": {
     "build": "tsc && chmod 755 build/index.js",
@@ -19,9 +20,11 @@
     "@modelcontextprotocol/sdk": "^1.0.0",
     "zod": "^3",
     "axios": "^1.7.0",
+    "mssql": "^12.2.0",
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
+    "@types/mssql": "^9.1.8",
     "@types/node": "^20.0.0",
     "typescript": "^5.3.0"
   }

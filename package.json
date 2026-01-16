@@ -26,6 +26,7 @@
     "gitlab-mcp-server": "./servers/build/gitlab.js"
   },
   "scripts": {
+    "test": "echo \"***test**\" ",
     "build": "npm run build --prefix servers",
     "dev": "npm run dev --prefix servers",
     "watch": "npm run watch --prefix servers",
@@ -35,7 +36,17 @@
   "files": [
     "build"
   ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3",
+    "axios": "^1.7.0",
+    "mssql": "^12.2.0",
+    "dotenv": "^16.4.5"
+  },
   "devDependencies": {
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "@types/mssql": "^9.1.8",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
   }
 }
